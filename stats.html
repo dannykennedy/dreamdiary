@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="js/Chart.min.js"></script>
+        <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+        <title>Forest</title>
+    </head>
+
+    <body>
+        <!-- NAVIGATION -->
+        <nav>
+            <div class="container">
+                <div class="row">
+                    <!-- NAVIGATION -->
+
+                    <a href="index.html">
+                        <div class="col-md-1 col-sm-1 hidden-xs goblack">
+                            <img src="images/forest_logo.png" alt="Forest logo" />
+                        </div>
+                    </a>
+
+                    <div id="sitename" class="col-md-2 col-sm-2 hidden-xs goblack">
+                        Forest
+                    </div>
+
+                    <div
+                        id="breadcrumbs"
+                        class="col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1 col-xs-12 goblack"
+                    >
+                        Dan Kennedy>All dreams
+                    </div>
+
+                    <a href="index.html"
+                        ><div class="col-md-1 col-sm-1 col-xs-3 goblack">
+                            <img src="images/me_icon.png" alt="my profile button" /></div
+                    ></a>
+
+                    <a href="write.html">
+                        <div class="col-md-1 col-sm-1 col-xs-3 goblack">
+                            <img src="images/pencil_icon.png" alt="write button" />
+                        </div>
+                    </a>
+
+                    <a href="stats.html">
+                        <div class="col-md-1 col-sm-1 col-xs-3 goblack">
+                            <img src="images/my_stats_icon.png" alt="stats button" /></div
+                    ></a>
+
+                    <div class="dropdown col-md-1 col-sm-1 col-xs-3 goblack">
+                        <a
+                            href="#"
+                            class="dropdown-toggle"
+                            data-toggle="dropdown"
+                            role="button"
+                        >
+                            <img src="images/settings_icon.png" alt="settings button"
+                        /></a>
+                        <ul class="dropdown-menu pull-right" aria-labelledby="pettype">
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li role="seperator" class="divider"></li>
+                            <li>
+                                <a href="#"
+                                    >Log out &nbsp;<span
+                                        class="glyphicon glyphicon-log-out"
+                                    ></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </nav>
+        <!-- END OF NAVIGATION -->
+        <!--STATS BOXES-->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="thumbnail statsbox">
+                        <div class="statsheader">
+                            <h2>People you dream about</h2>
+                        </div>
+                        <canvas id="placesChart2" width="400" height="250"></canvas>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="thumbnail statsbox">
+                        <div class="statsheader">
+                            <h2>Places you dream about</h2>
+                        </div>
+                        <canvas id="placesChart" width="400" height="250"></canvas>
+                    </div>
+                </div>
+
+                <!-- THINGS -->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="thumbnail statsbox">
+                        <div class="statsheader">
+                            <h2>Things you dream about</h2>
+                        </div>
+                        <canvas id="thingsChart" width="400" height="250"></canvas>
+                    </div>
+                </div>
+
+                <!-- ACTIONS -->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="thumbnail statsbox">
+                        <div class="statsheader">
+                            <h2>Actions you dream about</h2>
+                        </div>
+                        <canvas id="actionsChart" width="400" height="250"></canvas>
+                    </div>
+                </div>
+
+                <!-- EMOTIONS -->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="thumbnail statsbox">
+                        <div class="statsheader">
+                            <h2>Emotions you dream about</h2>
+                        </div>
+                        <canvas id="emotionsChart" width="400" height="250"></canvas>
+                    </div>
+                </div>
+
+                <!--DREAM TYPES-->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="thumbnail statsbox">
+                        <div class="statsheader">
+                            <h2>Dream types</h2>
+                        </div>
+                        <canvas id="dreamTypes" width="400" height="250"></canvas>
+                    </div>
+                </div>
+
+                <!--END OF STATS BOXES-->
+
+                <footer>
+                    <div class="col-md-4 col-xs-12 text-center-sm">
+                        <a href="#">PRIVACY | </a><a href="#">TERMS | </a
+                        ><a href="#">CONTACT </a>
+                    </div>
+                    <div
+                        id="copyright"
+                        class="col-md-4 col-md-offset-4 col-xs-12 text-right-md text-center-sm"
+                    >
+                        &copy; 2022 Forest
+                    </div>
+                </footer>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
+<script>
+    var ctx1 = document.getElementById("placesChart");
+    var ctx3 = document.getElementById("dreamTypes");
+    var ctx4 = document.getElementById("placesChart2");
+    var ctx5 = document.getElementById("thingsChart");
+    var ctx6 = document.getElementById("actionsChart");
+    var ctx7 = document.getElementById("emotionsChart");
+    var myColourArray = [
+        "rgba(222,238,234, 1)",
+        "rgba(132,129,131, 1)",
+        "rgba(223,118,108, 1)",
+        "rgba(180,224,218, 1)",
+        "rgba(230,199,166, 1)",
+        "rgba(178, 177, 175, 1)",
+    ];
+    var myPlacesChart = new Chart(ctx1, {
+        type: "bar",
+        data: {
+            labels: ["Katoomba", "Japan", "Sydney", "Mountain", "PHS", "KPS"],
+            datasets: [
+                {
+                    label: "This month",
+                    data: [4, 7, 13, 5, 1, 4],
+                    backgroundColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderWidth: 1,
+                },
+            ],
+        },
+        options: {
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                    },
+                ],
+            },
+        },
+    });
+    var myDoughnutChart2 = new Chart(ctx3, {
+        type: "doughnut",
+        data: {
+            labels: [
+                "Normal",
+                "pleasant",
+                "unpleasant",
+                "nightmare",
+                "lucid",
+                "big dream",
+            ],
+            datasets: [
+                {
+                    label: "This month",
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderWidth: 1,
+                },
+            ],
+        },
+        options: {
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                    },
+                ],
+            },
+        },
+    });
+    var placesChart = new Chart(ctx4, {
+        type: "bar",
+        data: {
+            labels: ["priest", "John", "ranger", "dad", "Else", "mum"],
+            datasets: [
+                {
+                    label: "This month",
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderWidth: 1,
+                },
+            ],
+        },
+        options: {
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                    },
+                ],
+            },
+        },
+    });
+    var myThings = new Chart(ctx5, {
+        type: "bar",
+        data: {
+            labels: ["dog", "cat", "apple", "glasses", "mobile", "hat"],
+            datasets: [
+                {
+                    label: "This month",
+                    data: [13, 6, 2, 9, 3, 5],
+                    backgroundColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderWidth: 1,
+                },
+            ],
+        },
+        options: {
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                    },
+                ],
+            },
+        },
+    });
+    var myActions = new Chart(ctx6, {
+        type: "bar",
+        data: {
+            labels: [
+                "travelling",
+                "running",
+                "flying",
+                "hitting",
+                "relaxing",
+                "studying",
+            ],
+            datasets: [
+                {
+                    label: "This month",
+                    data: [2, 1, 10, 5, 13, 3],
+                    backgroundColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderWidth: 1,
+                },
+            ],
+        },
+        options: {
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                    },
+                ],
+            },
+        },
+    });
+    var myActions = new Chart(ctx7, {
+        type: "bar",
+        data: {
+            labels: ["happiness", "fear", "love", "excitement", "confusion", "stress"],
+            datasets: [
+                {
+                    label: "This month",
+                    data: [2, 5, 3, 5, 12, 13],
+                    backgroundColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderColor: [
+                        myColourArray[0],
+                        myColourArray[1],
+                        myColourArray[2],
+                        myColourArray[3],
+                        myColourArray[4],
+                        myColourArray[5],
+                    ],
+                    borderWidth: 1,
+                },
+            ],
+        },
+        options: {
+            scales: {
+                yAxes: [
+                    {
+                        ticks: {
+                            beginAtZero: true,
+                        },
+                    },
+                ],
+            },
+        },
+    });
+</script>
