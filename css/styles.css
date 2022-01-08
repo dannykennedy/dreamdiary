@@ -1,0 +1,394 @@
+/*WEB FONTS*/
+
+@import url(https://fonts.googleapis.com/css?family=Hind+Vadodara:400,300);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond);
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600,500);
+/*
+@import url(https://fonts.googleapis.com/css?family=Khula:400,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300); 
+*/
+/*@import url(https://fonts.googleapis.com/css?family=Work+Sans:200,400,300); cartoony*/
+/*@import url(https://fonts.googleapis.com/css?family=Libre+Franklin:300);*/
+/*@import url(https://fonts.googleapis.com/css?family=Martel+Sans:400,300);*/
+/*@import 'https://fonts.googleapis.com/css?family=Karla';*/
+/*@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400'; terrible and small*/
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:400,300); too narrow*/
+/*@import 'https://fonts.googleapis.com/css?family=Ek+Mukta:200,300';*/
+/*@import 'https://fonts.googleapis.com/css?family=Hind:300|Oxygen:300';*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400";
+
+/*BASIC TYPE RULES*/
+
+html {
+    font-size: 1.2em;
+}
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+.goblack {
+    color: black;
+    opacity: 0.4;
+}
+.goblack:hover {
+    color: black;
+    opacity: 0.8;
+}
+.pager a {
+    color: #848183;
+}
+
+/*END BASIC TYPE RULES*/
+
+/*NAVIGATION*/
+
+nav {
+    font-family: "Poppins", sans-serif;
+    height: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+nav ul {
+    list-style: none;
+}
+
+#sitename {
+    margin-top: 15px;
+}
+#breadcrumbs {
+    text-align: center;
+    margin-top: 15px;
+}
+#icon-settings {
+    background-image: url("../images/settings_icon.png");
+    background-position: center center;
+    background-size: cover;
+    height: 50px;
+    /*
+    display:table-cell;
+    vertical-align:top;
+*/
+    border: 0px solid transparent;
+}
+.navbar-default {
+    /*    background-color: white;*/
+    border: none;
+}
+#navlogo {
+    display: block;
+    background-color: aqua;
+}
+
+#settings-button {
+    background-repeat: no-repeat;
+    height: 59px;
+}
+
+/*END NAVIGATION*/
+
+/*HEADER*/
+
+.titleimage {
+    /*    background-image: url('../images/titlepic_myprofile_3by4.jpg');*/
+    background-position: center;
+    background-size: cover;
+    height: 416px;
+    margin: 15px; /* this gives it a border at xs size*/
+}
+
+/*decrease height of title image at small breakpoint*/
+@media (max-width: 768px) {
+    .titleimage {
+        height: 300px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+    }
+}
+
+#bluebox {
+    background: rgba(132, 180, 212, 0.8);
+    height: 200px;
+    margin-top: -120px;
+    /*    margin-top: -20%;*/
+    padding: none;
+    border-radius: 2px;
+}
+
+/*give blue box a margin at xs breakpoint*/
+@media (max-width: 768px) {
+    #bluebox {
+        margin-left: 15px;
+        margin-right: 15px;
+        /*make it fit better with title image at small breakpoint*/
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+}
+
+#bluebox a:link {
+    color: white;
+}
+#bluebox a:visited {
+    color: white;
+}
+#bluebox a:hover {
+    color: #555;
+}
+
+/*
+header {
+    margin-top: 100px;
+}
+*/
+
+.jumbotron {
+    background-color: aquamarine;
+}
+
+#mainheader {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    font-size: 40px;
+    color: white;
+    display: inline-block;
+    margin: 20px;
+    margin-top: 30px;
+}
+.upperprofilecircle {
+    /*    width: 40px;*/
+    /*    height: 40px;*/
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    /*    margin-top: 20px;*/
+}
+#infobox {
+    margin-top: 6%;
+    height: 40%;
+    width: auto;
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#authoranddate {
+    /*    margin-top: 10px;*/
+}
+main {
+    font-family: "EB Garamond", "Times New Roman", serif;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+/*END HEADER*/
+
+/*MAIN*/
+
+#mainone {
+    height: auto;
+    /*    padding: 0px;*/
+    font-size: 1.2em;
+}
+.icon {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+}
+img {
+    width: 100%;
+}
+
+.postprofilepic {
+    /*
+    width: 40px;
+    height: 40px; 
+*/
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    /*    background-color: aqua;*/
+}
+
+.postpic {
+    height: 260px;
+    background-position: center;
+    background-size: cover;
+}
+
+.postprofilename {
+    vertical-align: middle;
+    width: 100px;
+    margin-right: 0;
+}
+
+.posttitle {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.postprofilename {
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+.panel-heading {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+/*
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}*/
+
+/*END MAIN*/
+
+/*WRITE PAGE*/
+
+#inputDream {
+    font-family: "EB Garamond", "Times New Roman", serif;
+    font-size: 1em;
+    overflow: auto;
+    outline: none;
+    resize: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width: 100%;
+    height: 400px;
+}
+#titlepicbox {
+    width: 100%;
+    height: 250px;
+    float: none;
+    margin-top: auto;
+    padding: none;
+    border: 1px solid #cccccc;
+    /*    background-image: url('../images/titlepic_myprofile.jpg');*/
+}
+#cameraicon {
+    float: right;
+    margin-top: 205px;
+    margin-right: 10px;
+}
+#savebutton {
+    background-color: rgba(132, 180, 212, 0.8);
+    color: white;
+}
+.input-group-addon {
+    background-color: rgba(132, 180, 212, 0.8);
+}
+.input-lg {
+    border-radius: 2px;
+}
+
+/*END WRITE PAGE*/
+
+/*STATS*/
+
+.statsheader {
+    height: 40px;
+    background-color: #848183;
+    padding: 10px;
+}
+
+.statsheader h2 {
+    color: white;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-top: auto;
+}
+
+/*to override thumbnail properties of padding and border colour and bottom margin*/
+.statsbox {
+    display: block;
+    padding: 0px;
+    margin-bottom: 30px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #848183;
+    border-radius: 4px;
+}
+
+/*END STATS*/
+
+/*FOOTER*/
+
+footer {
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    color: grey;
+    background-color: white;
+    height: 59px;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+footer a:link {
+    color: grey;
+}
+footer a:visited {
+    color: grey;
+}
+footer a:hover {
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .text-center-sm {
+        text-align: center;
+    }
+}
+@media (min-width: 769px) {
+    .text-right-md {
+        text-align: right;
+    }
+}
+
+/*
+.text-xs-left { text-align: left; }
+.text-xs-right { text-align: right; }
+.text-xs-center { text-align: center; }
+.text-xs-justify { text-align: justify; }
+
+@media (min-width: @screen-sm-min) {
+  .text-sm-left { text-align: left; }
+  .text-sm-right { text-align: right; }
+  .text-sm-center { text-align: center; }
+  .text-sm-justify { text-align: justify; }
+}
+
+@media (min-width: @screen-md-min) {
+  .text-md-left { text-align: left; }
+  .text-md-right { text-align: right; }
+  .text-md-center { text-align: center; }
+  .text-md-justify { text-align: justify; }
+}
+
+@media (min-width: @screen-lg-min) {
+  .text-lg-left { text-align: left; }
+  .text-lg-right { text-align: right; }
+  .text-lg-center { text-align: center; }
+  .text-lg-justify { text-align: justify; }
+}
+*/
+
+/*END FOOTER*/
